@@ -15,13 +15,26 @@
     --bg-yellow-400: hsl(48, 100%, 67%);
 }
 
-.head {
+.app {
+    font-family: "Mulish", sans-serif;
+}
+
+/* CABEÇALHO */
+header {
     background-color: var(--bg-yellow-800);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .head > div {
+    margin-top: 3.5rem;
+    margin-bottom: 2.5rem;
+
     display: flex;
     align-items: center;
+    gap: 1.2rem;
 }
 
 .head > div > .logo {
@@ -37,20 +50,21 @@
     letter-spacing: 0.2rem;
 }
 
+.head > .title {
+    display: flex;
+    align-items: center;
+    gap: 9rem;
+}
+
 .head > .title > h1 {
-    font-family: "Mulish", sans-serif;
     color: var(--white);
     font-weight: 900;
     font-size: 4.5rem;
+    line-height: 4.7rem;
 }
 
 .head > .title > h1 > span {
     text-decoration: underline;
-}
-
-.head > .title {
-    display: flex;
-    align-items: center;
 }
 
 .head > .title > img {
@@ -61,4 +75,142 @@
 .head > button {
     background-color: var(--bg-yellow-400);
     color: var(--white);
+    
+    font-weight: 800;
+
+    outline: none;
+    border: none;
+
+    font-size: 1.2rem;
+    letter-spacing: .3rem;
+    padding: 1.2rem 5rem;
+    border-radius: 6rem;
+
+    padding-right: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* O QUE É*/
+.definition {
+    background-color: var(--bg-yellow-400);
+    color: var(--bg-yellow-800);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.definition > h2 {
+    margin-top: 13rem;
+    margin-bottom: 3rem;
+    font-size: 3.2rem;
+    font-weight: 800;
+}
+
+.definition > p {
+    font-size: 1.4rem;
+    
+    max-width: 50rem;
+    margin-bottom: 14rem;
+
+    text-align: justify;
+    line-height: 2rem;
+}
+
+.illness {
+    background-color: var(--bg-yellow-800);
+    color: var(--white);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.illness > h1 {
+    margin-top: 6.5rem;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.illness > article {
+    border: 1px solid var(--white);
+    border-radius: 20px;
+    width: 35rem;
+    height: fit-content;
+
+    padding: 2.6rem 6rem 2.6rem 2.6rem;
+}
+
+.tips {
+    background-color: var(--bg-yellow-400);
+    color: var(--bg-yellow-800);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tips > h2 {
+    margin-top: 13rem;
+    margin-bottom: 3rem;
+    font-size: 3.2rem;
+    font-weight: 800;
+}
+
+.tips > p {
+    font-size: 1.4rem;
+    
+    max-width: 50rem;
+    margin-bottom: 7rem;
+
+    text-align: justify;
+    line-height: 2rem;
+}
+
+.tips > button {
+    background-color: var(--bg-yellow-800);
+    color: var(--white);
+    
+    font-weight: 800;
+
+    outline: none;
+    border: none;
+
+    font-size: 1.2rem;
+    letter-spacing: .3rem;
+    padding: 1.2rem 5rem;
+    border-radius: 6rem;
+
+    padding-right: 5rem;
+    margin-bottom: 10rem;
+}
+
+.depositions {
+    background-color: var(--bg-yellow-800);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+.depositions > h2 {
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+
+    color: var(--white);
+
+    font-size: 3.2rem;
+    font-weight: 800;
+}
+
+footer > img {
+    height: 5rem;
+    width: 5rem;
+    background-color: black;
 }
