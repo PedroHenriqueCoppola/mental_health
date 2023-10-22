@@ -12,6 +12,7 @@
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
     --bg-yellow-800: hsl(36, 100%, 50%);
+    --bg-yellow-700: hsl(36, 88%, 50%);
     --bg-yellow-400: hsl(48, 100%, 67%);
 }
 
@@ -75,14 +76,14 @@ header {
 .head > button {
     background-color: var(--bg-yellow-400);
     color: var(--white);
-    
+
     font-weight: 800;
 
     outline: none;
     border: none;
 
     font-size: 1.2rem;
-    letter-spacing: .3rem;
+    letter-spacing: 0.3rem;
     padding: 1.2rem 5rem;
     border-radius: 6rem;
 
@@ -95,7 +96,7 @@ header {
 .definition {
     background-color: var(--bg-yellow-400);
     color: var(--bg-yellow-800);
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -111,7 +112,7 @@ header {
 
 .definition > p {
     font-size: 1.4rem;
-    
+
     max-width: 50rem;
     margin-bottom: 14rem;
 
@@ -136,8 +137,15 @@ header {
     font-weight: 800;
 }
 
-.illness > article {
+.illness > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.illness > div > article {
     border: 1px solid var(--white);
+    background-color: var(--bg-yellow-700);
     border-radius: 20px;
     width: 35rem;
     height: fit-content;
@@ -145,10 +153,21 @@ header {
     padding: 2.6rem 6rem 2.6rem 2.6rem;
 }
 
+.illness > div > article > h2 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.illness > div > article > img {
+    width: 6rem;
+    height: 6rem;
+}
+
 .tips {
     background-color: var(--bg-yellow-400);
     color: var(--bg-yellow-800);
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,38 +175,39 @@ header {
 }
 
 .tips > h2 {
-    margin-top: 13rem;
+    margin-top: 10rem;
     margin-bottom: 3rem;
     font-size: 3.2rem;
     font-weight: 800;
 }
 
-.tips > p {
+.tips > .tipsContent > .text > h3 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.tips > .tipsContent > .text > p {
     font-size: 1.4rem;
-    
+
     max-width: 50rem;
-    margin-bottom: 7rem;
+    margin-bottom: 2rem;
 
     text-align: justify;
     line-height: 2rem;
 }
 
-.tips > button {
-    background-color: var(--bg-yellow-800);
-    color: var(--white);
-    
-    font-weight: 800;
+.tips > .tipsContent > .text > p:nth-child(10) {
+    margin-bottom: 9rem;
+}
 
-    outline: none;
-    border: none;
+.tips > .tipsContent {
+    display: flex;
+    gap: 10rem;
+}
 
-    font-size: 1.2rem;
-    letter-spacing: .3rem;
-    padding: 1.2rem 5rem;
-    border-radius: 6rem;
-
-    padding-right: 5rem;
-    margin-bottom: 10rem;
+.tips > div > img {
+    width: 30rem;
+    height: 50rem;
 }
 
 .depositions {
@@ -196,7 +216,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }
 
 .depositions > h2 {
