@@ -12,15 +12,30 @@
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
     --bg-yellow-800: hsl(36, 100%, 50%);
-    --bg-yellow-700: hsl(36, 88%, 50%);
-    --bg-yellow-400: hsl(48, 100%, 67%);
+    --bg-yellow-700: hsl(36, 90%, 50%);
+    --bg-yellow-400: hsl(48, 94%, 69%);
+    --scrollbar: hsl(36, 100%, 65%);
 }
 
 .app {
     font-family: "Mulish", sans-serif;
 }
 
-/* CABEÇALHO */
+/* ROLL BAR */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar); 
+    border-radius: 6px; 
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-yellow-800);
+}
+
+/* HEADER SECTION */
 header {
     background-color: var(--bg-yellow-800);
     display: flex;
@@ -39,13 +54,13 @@ header {
 }
 
 .head > div > .logo {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
 }
 
 .head > div > p {
     font-family: "Open Sans", sans-serif;
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--white);
     letter-spacing: 0.2rem;
@@ -60,8 +75,8 @@ header {
 .head > .title > h1 {
     color: var(--white);
     font-weight: 900;
-    font-size: 4.5rem;
-    line-height: 4.7rem;
+    font-size: 5rem;
+    line-height: 5.4rem;
 }
 
 .head > .title > h1 > span {
@@ -69,30 +84,48 @@ header {
 }
 
 .head > .title > img {
-    width: 32rem;
-    height: 20rem;
+    width: 35rem;
+    height: 23rem;
+
+    transition-property: transform;
+    transition-duration: 0.4s;
+}
+
+.head > .title > img:hover {
+    transform: scale(1.2);
 }
 
 .head > button {
     background-color: var(--bg-yellow-400);
-    color: var(--white);
-
-    font-weight: 800;
 
     outline: none;
     border: none;
+    cursor: pointer;
 
-    font-size: 1.2rem;
-    letter-spacing: 0.3rem;
     padding: 1.2rem 5rem;
     border-radius: 6rem;
 
     padding-right: 5rem;
     margin-top: 2rem;
     margin-bottom: 4rem;
+
+    transition-property: transform;
+    transition-duration: 0.4s;
 }
 
-/* O QUE É*/
+.head > button > a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+}
+
+.head > button:hover {
+    transform: scale(1.2);
+}
+
+/* INTRODUCTION SECTION */
 .definition {
     background-color: var(--bg-yellow-400);
     color: var(--bg-yellow-800);
@@ -105,21 +138,22 @@ header {
 
 .definition > h2 {
     margin-top: 13rem;
-    margin-bottom: 3rem;
-    font-size: 3.2rem;
+    margin-bottom: 3.5rem;
+    font-size: 4rem;
     font-weight: 800;
 }
 
 .definition > p {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
 
     max-width: 50rem;
     margin-bottom: 14rem;
 
     text-align: justify;
-    line-height: 2rem;
+    line-height: 2.4rem;
 }
 
+/* ILLNESS SECTION */
 .illness {
     background-color: var(--bg-yellow-800);
     color: var(--white);
@@ -131,39 +165,88 @@ header {
 }
 
 .illness > h1 {
-    margin-top: 6.5rem;
-    margin-bottom: 3rem;
-    font-size: 3rem;
+    margin-top: 9rem;
+    margin-bottom: 6rem;
+    font-size: 4rem;
     font-weight: 800;
 }
 
-.illness > div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-}
-
-.illness > div > article {
+.illness > .cards > div > article {
     border: 1px solid var(--white);
     background-color: var(--bg-yellow-700);
     border-radius: 20px;
     width: 35rem;
     height: fit-content;
 
-    padding: 2.6rem 6rem 2.6rem 2.6rem;
+    padding: 2.6rem 4.5rem 2.6rem 2.6rem;
+
+    transition-property: transform;
+    transition-duration: 0.4s;
 }
 
-.illness > div > article > h2 {
+.illness > .cards > div > article:hover {
+    transform: scale(1.2);
+}
+
+.illness > .cards > div > article > .articleTitle {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+
+    transition-property: transform;
+    transition-duration: 0.4s;
+}
+
+.illness > .cards > div > article > .articleTitle:hover {
+    transform: scale(1.1);
+}
+
+.illness > .cards > div > article > .articleTitle > img {
+    width: 7rem;
+    height: 7rem;
+
+    transition-property: transform;
+    transition-duration: 0.4s;
+}
+
+.illness > .cards > div > article > .articleTitle > h2 {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.illness > .cards > div > article > span {
     font-size: 2rem;
+    font-weight: 700;
 }
 
-.illness > div > article > img {
-    width: 6rem;
-    height: 6rem;
+.illness > .cards > div > article > p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
 }
 
+.illness > .cards > div > .panic {
+    margin-bottom: 7rem;
+}
+
+.illness > .cards {
+    display: flex;
+    gap: 3rem;
+}
+
+.depression,
+.bipolarity,
+.deficit,
+.panic,
+.anxiety,
+.autism,
+.compulsion,
+.schizophrenia {
+    margin-bottom: 2rem;
+}
+
+/* HEALTH TIPS SECTION */
 .tips {
     background-color: var(--bg-yellow-400);
     color: var(--bg-yellow-800);
@@ -175,9 +258,9 @@ header {
 }
 
 .tips > h2 {
-    margin-top: 10rem;
-    margin-bottom: 3rem;
-    font-size: 3.2rem;
+    margin-top: 9rem;
+    margin-bottom: 5rem;
+    font-size: 4rem;
     font-weight: 800;
 }
 
@@ -187,7 +270,7 @@ header {
 }
 
 .tips > .tipsContent > .text > p {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 
     max-width: 50rem;
     margin-bottom: 2rem;
@@ -208,8 +291,10 @@ header {
 .tips > div > img {
     width: 30rem;
     height: 50rem;
+    border: 4px solid var(--bg-yellow-800);
 }
 
+/* DEPOSITIONS SECTION */
 .depositions {
     background-color: var(--bg-yellow-800);
 
@@ -217,20 +302,157 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    gap: 4rem;
 }
 
 .depositions > h2 {
     margin-top: 10rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 
     color: var(--white);
 
-    font-size: 3.2rem;
+    font-size: 4rem;
     font-weight: 800;
 }
 
-footer > img {
-    height: 5rem;
-    width: 5rem;
-    background-color: black;
+.depositions > article {
+    border: 1px solid var(--white);
+    border-radius: 20px;
+
+    background-color: var(--bg-yellow-700);
+    color: var(--white);
+
+    width: 90rem;
+    height: fit-content;
+
+    padding: 2.6rem 4.5rem 1rem 2.6rem;
+
+    transition-property: transform;
+    transition-duration: 0.4s;
+}
+
+.depositions > article:hover {
+    transform: scale(1.1);
+}
+
+.depositions > article > .name > h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.depositions > article > .name > h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.depositions > article > span {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.depositions > article > p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.depositions > .last {
+    margin-bottom: 7rem;
+}
+
+/* MOTIVACIONAL SECTION */
+.motivacional {
+    background-color: var(--bg-yellow-400);
+    color: var(--bg-yellow-800);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.motivacional > h1 {
+    margin-top: 13rem;
+    margin-bottom: 3.5rem;
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.motivacional > p {
+    font-size: 1.7rem;
+
+    max-width: 60rem;
+    margin-bottom: 14rem;
+
+    text-align: center;
+    line-height: 2.4rem;
+}
+
+/* FOOTER SECTION */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: var(--bg-yellow-800);
+    color: var(--white);
+
+    padding: 20rem 0 14rem;
+}
+
+footer > .contact > h1 {
+    font-size: 4rem;
+    font-weight: 800;
+
+    margin-bottom: 7rem;
+}
+
+footer > .contact > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+footer > .contact > div > h3 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+footer > .contact > div > p {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+footer > .contact > .phone {
+    gap: 15rem;
+}
+
+footer > .contact > .email {
+    gap: 9.6rem;
+}
+
+footer > .contact > .social > h3 {
+    margin-right: 13rem;
+}
+
+footer > .contact > .social > img {
+    width: 4rem;
+    height: 4rem;
+    margin-left: 2rem;
+
+    cursor: pointer;
+
+    transition-property: transform;
+    transition-duration: 0.4s;
+}
+
+footer > .contact > .social > img:hover {
+    transform: scale(1.2);
+}
+
+footer > .hands {
+    height: 40rem;
+    width: 43rem;
 }
