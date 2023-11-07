@@ -384,10 +384,20 @@ header {
     font-size: 1.7rem;
 
     max-width: 60rem;
-    margin-bottom: 14rem;
+    margin-bottom: 5rem;
 
     text-align: center;
     line-height: 2.4rem;
+}
+
+.motivacional > h2 {
+    margin-bottom: 14rem;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.motivacional > h2 > span {
+    font-size: 4rem;
 }
 
 /* FOOTER SECTION */
